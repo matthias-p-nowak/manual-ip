@@ -7,7 +7,31 @@
 </head>
 <body>
     <h1>Oppsett av faste ip-adresser</h1>
+    De følgende ting må settes inn fra hånd når en velger faste ip-adresser:
+    <ul>
+        <li>selve ip-adressen</li>
+        <li>nettverksmasken som oftest er 255.255.255.0</li>
+        <li>gateway: oftest slutter den i .1 eller .254 &mdash; all nettverkstrafikken sendes ditt</li>
+        <li>DNS: en eller flere servere som opplyser navn til numerisk ip-adresser</li>
+    </ul>
+    For datamaskiner som er tilkoblet stikkkontakten i veggen, må innstillingene gjøres på datamaskinen.
+    Dersom man har en trådløs ruter og den ikke fungerer med en gang, så må det gjøres via web på selve ruteren.
+    
     <h2>Windows</h2>
     <h2>TP-Link ruter</h2>
+    <h2>Netgear ruter - eksempel</h2>
+    My own Netgear ruter tilbyr muligheten å sette inn en egen konfigurasjon. 
+    Først må jeg bruke en webleser til å forbinde min datamaskin med ruteren. 
+    I veiledningen til ruteren står det hvilken adresse som kan brukes.
+    Noen ruter tilbyr muligheten til å bruke et eller annet navn. 
+    Min ruter kan nås via <a href="http://192.168.0.1/">http://192.168.0.1/</a>, men andre tilbyr <a href="http://10.0.0.1">http://10.0.0.1</a>.
+    De som har konfigurert sin egen trådløs ruter med eget WLAN-navn og passord vet hvordan den kan nås.
+    Bildet under er hentet fra "bildet", "internet":
+    <img src="pics/netgear.png" alt="part of the Netgear configuration">
+
+    <h2>Linux</h2>
+    Vanligvis har Linux-desktop et Wifi-symbol i oppgavelinjen, som gir tilgang til konfigurasjon. 
+    Let der etter DCHP og endre det fra automatisk til manuell. Sett inn IP-adressen og Nettverksmasken.
+    Ellers finnes det `nmtui`, et verktøy på kommandolinje som bekvemt lar en sette inn verdiene.
 </body>
 </html>
